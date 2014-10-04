@@ -11,7 +11,7 @@
 		pressTimer = setInterval(function(){
 			//650ms taphold event
 			if(pressCounter >= 65) {
-				alert('open nav');
+				openNav();
 				clearInterval(pressTimer);
 				pressCounter = 0;
 			} else {
@@ -24,5 +24,10 @@
     	clearInterval(pressTimer);
     	pressCounter = 0;
 	},false);
+
+	function openNav(){
+		$('body').wrapInner('<div class="nav-wrapper"></div>')
+		console.log('open nav');
+	};
 
 })();

@@ -1,0 +1,21 @@
+.nav-wrapper {
+	user-select: none;
+	animation: blur 650ms forwards;
+
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow: scroll;
+	// overflow-scrolling: touch;
+}
+
+@keyframes blur {
+	0% {
+		filter: blur(0px);
+	}
+	100% {
+		filter: blur(3px);
+	}
+}

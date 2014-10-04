@@ -4446,6 +4446,38 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+.nav-wrapper {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-animation: blur 650ms forwards;
+  animation: blur 650ms forwards;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow: scroll; }
+
+@-webkit-keyframes blur {
+  0% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px); }
+
+  100% {
+    -webkit-filter: blur(3px);
+    filter: blur(3px); } }
+
+@keyframes blur {
+  0% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px); }
+
+  100% {
+    -webkit-filter: blur(3px);
+    filter: blur(3px); } }
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -4456,7 +4488,8 @@ button.close {
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-  -webkit-user-select: none; }
+  position: relative;
+  height: 100%; }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header, .marketing, .footer {
